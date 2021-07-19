@@ -4,7 +4,7 @@ import {
     Switch,
     Route
 } from "react-router-dom";
-import NavBar from "./components/Navbar/NavBar.js";
+import NavBar from "./components/NavBar/NavBar.js";
 import HomePage from './components/pages/HomePage/HomePage.js';
 import BlogPage from './components/pages/BlogPage/BlogPage.js';
 import Login from './components/pages/Login/Login.js';
