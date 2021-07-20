@@ -4,7 +4,7 @@ import {
     Switch,
     Route
 } from "react-router-dom";
-import NavBar from "./components/NavBar/NavBar.js";
+import Navbar from "./components/Navbar/Navbar.js";
 import HomePage from './components/pages/HomePage/HomePage.js';
 import BlogPage from './components/pages/BlogPage/BlogPage.js';
 import Login from './components/pages/Login/Login.js';
@@ -15,7 +15,7 @@ const App=()=> {
   return (
     <div className="App">
      <Router>
-       <NavBar/>
+       <Navbar/>
           <Switch>
               <Route exact path='/' component={HomePage}/>
               <Route exact path='/home' component={HomePage}/>
