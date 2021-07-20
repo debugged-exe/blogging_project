@@ -28,6 +28,27 @@
   color: #61dafb;
 }
 
+.shapeCircle{
+    border-radius: 50%;
+}
+.shapeSquare{
+  border-radius: 0px;
+}
+.shapeRoundedSquare{
+  border-radius: 30%;
+}
+.iconStyling{
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+
+}
+.iconStyling:hover{
+  transform: scale(1.2);
+}
+
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
