@@ -8,6 +8,8 @@ import Navbar from "./components/Navbar/Navbar.js";
 import HomePage from './components/pages/HomePage/HomePage.js';
 import BlogPage from './components/pages/BlogPage/BlogPage.js';
 import SignInPage from './components/pages/SignInPage/SignInPage';
+import Footer from "./components/Footer/Footer.js";
+
 
 const App = () => {
   return (
@@ -19,8 +21,9 @@ const App = () => {
           <Route exact path='/home' component={HomePage} />
           <Route exact path='/blog' component={BlogPage} />
           <Route exact path='/category' component={HomePage} />
-          <Route exact path='/signinpage' component={SignInPage} />
+          <Route exact path='/signup' component={SignInPage} />
         </Switch>
+        <Footer />
       </Router>
     </div>
   );
