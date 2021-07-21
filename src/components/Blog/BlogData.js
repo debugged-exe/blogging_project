@@ -26,8 +26,7 @@ export const BlogData=[
   }
 ],
   comments: [],
-  createdAt: "2021-08-6T05:44:10.338Z",
-  updatedAt: "2021-07-20T05:44:10.338Z",
-  releaseDate:'JUL 21,2021'
+  createdAt: "2020-03-15T05:44:10.338Z",
+  updatedAt: "2021-07-20T05:44:10.338Z"
 }
 ]
