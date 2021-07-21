@@ -1,9 +1,12 @@
 import React from 'react';
+import Blog from '../../Blog/Blog.js';
+
 
 const BlogPage = ()=> {
-  console.log("blog");
+
     return(
       <div>
+        <Blog/>
       </div>
     )
 }
