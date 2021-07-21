@@ -9,7 +9,6 @@ import HomePage from './components/pages/HomePage/HomePage.js';
 import BlogPage from './components/pages/BlogPage/BlogPage.js';
 import SignInPage from './components/pages/SignInPage/SignInPage';
 
-
 const App = () => {
   return (
     <div className="App">

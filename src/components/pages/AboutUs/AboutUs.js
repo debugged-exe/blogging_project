@@ -1,7 +1,8 @@
 import React from 'react';
+import About from "../../AboutUs/AboutUs";
 
 const AboutUs = ()=> {
-    console.log('hi');
+   return (<About/>);
 } 
 
 export default AboutUs;

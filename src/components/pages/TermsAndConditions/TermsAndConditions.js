@@ -1,7 +1,7 @@
 import React from 'react';
-
+import TermsConditions from "../../TermsAndConditions/TermsAndConditions";
 const TermsAndConditions = ()=> {
-    console.log('hi');
+    return (<TermsConditions/>);
 } 
 
 export default TermsAndConditions;

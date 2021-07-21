@@ -1,0 +1,69 @@
+.skills-image{
+    height:400px;
+    width:400px;
+    align-items: center;
+    object-fit: cover;
+}
+
+.skill-bar {
+  max-width:300px;
+    height: 10px;
+    background-color:darkgray;
+    border-radius: 8px;
+  }
+  .skill-per-ui {
+    height: 10px;
+    background-color:#0069FF;
+    border-radius: 8px;
+    width: 60%;
+  }
+  .skill-per-ideas {
+    height: 10px;
+    background-color:#0069FF;
+    border-radius: 8px;
+    width: 80%;
+  }
+  .skill-per-marketing {
+    height: 10px;
+    background-color:#0069FF;
+    border-radius: 8px;
+    width: 75%;
+  }
+  .skill-per-consultation {
+    height: 10px;
+    background-color:#0069FF;
+    border-radius: 8px;
+    width: 80%;
+  }
+
+.skills-text{
+  width:50%;
+}
+
+  @media only screen and (max-width:768px){
+    .my-skills{
+      display:flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+      padding:0px;
+      width:100%;
+    }
+    .skills-text{
+      width:100%;
+    }
+  }
+
+  .percent-bars{
+    max-width:300px;
+  }
+
+  .skills-text{
+    max-width:450px;
+  }
+
+@media only screen and (max-width:425px){
+  .my-skills{
+    padding:20px;
+  }
+}
