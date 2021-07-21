@@ -9,6 +9,7 @@ import HomePage from './components/pages/HomePage/HomePage.js';
 import BlogPage from './components/pages/BlogPage/BlogPage.js';
 import Login from './components/pages/Login/Login.js';
 import SignUp from './components/pages/SignUp/SignUp';
+import Newsletter from "./components/Newsletter/Newsletter";
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
           <Route exact path='/signup' component={SignUp} />
         </Switch>
       </Router>
+      <Newsletter/>
     </div>
   );
 }
