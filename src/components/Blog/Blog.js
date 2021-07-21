@@ -9,7 +9,7 @@ const Blog = ()=> {
              {
                BlogData.map((item,index)=>{
                  return(
-                   <div>
+                   <div key={item._id}>
                       <h1>{item.title}</h1>
                       <h5 className="gray">{item.releaseDate} . {item.read_time} MIN READ .<span style={{color:"#00bbff"}}> WEB DESIGN</span></h5>
                       <img className="br4 main-img" alt="blog" src={item.image_url} />
