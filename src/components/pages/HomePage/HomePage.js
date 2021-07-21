@@ -1,8 +1,8 @@
 import React from 'react';
 
-const HomePage = ()=> {
+const HomePage = () => {
   console.log("home");
-  return(
+  return (
     <div>
     </div>
   )
