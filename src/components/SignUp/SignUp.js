@@ -9,9 +9,7 @@ const SignUp = () => {
 
   return (
 
-
-
-    <div className="form-container pt6">
+    <div className="form-container">
       <form id="signup-form">
         <h1> Sign Up </h1>
 
@@ -34,7 +32,7 @@ const SignUp = () => {
 
         <input type="submit" value="CREATE ACCOUNT" />
 
-        <div className="normal flex justify-center items-center"> <h3 className="mr2 normal">Sign up with</h3> <FcGoogle size="1.7rem" color="#9633FF" /> </div>
+        <div className="normal flex justify-center items-center"> <h2 className="mr2 normal">Sign up with</h2> <FcGoogle size="1.7rem" /> </div>
 
       </form>
     </div>
