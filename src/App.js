@@ -10,7 +10,6 @@ import BlogPage from './components/pages/BlogPage/BlogPage.js';
 import Login from './components/pages/Login/Login.js';
 import SignUp from './components/pages/SignUp/SignUp';
 
-
 const App = () => {
   return (
     <div className="App">
