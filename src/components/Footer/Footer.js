@@ -1,5 +1,4 @@
 import React from 'react';
-
 import IconBg from '../IconBg/IconBg.js';
 import FlexibleLogo from '../Navbar/FlexibleLogo/FlexibleLogo.js';
 import { HashLink as Link } from 'react-router-hash-link';
