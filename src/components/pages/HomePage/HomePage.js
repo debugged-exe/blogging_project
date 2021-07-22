@@ -1,9 +1,12 @@
 import React from 'react';
+import './HomePage.scss';
+import HomeIntro from '../../HomeIntro/HomeIntro.js';
 
 const HomePage = () => {
-  console.log("home");
+
   return (
-    <div>
+    <div className="pt6 homepage">
+      <HomeIntro/>
     </div>
   )
 
