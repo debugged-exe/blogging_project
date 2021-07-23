@@ -50,7 +50,7 @@ const Footer = () => {
                     <li className="list-item">Bits</li>
                     <li className="list-item">Bluehost</li>
                     <li className="list-item">Digital Ocean</li>
-             https://github.com/       <li className="list-item">Made with Creative Tim</li>
+                    <li className="list-item">Made with Creative Tim</li>
                 </ul>
              </div>
          </div>
