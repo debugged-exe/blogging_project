@@ -7,6 +7,11 @@ import './SignUp.css'
 
 const SignUp = () => {
 
+  const signInWithGoogle = () => {
+   const googleRedirectURL = "http://localhost:3001/login/google";
+   const newWindow = window.open(googleRedirectURL, "_blank", "width:500,height: 600");
+  }
+
   return (
 
     <div className="form-container">
@@ -32,7 +37,7 @@ const SignUp = () => {
 
         <input type="submit" value="CREATE ACCOUNT" />
 
-        <div className="normal flex justify-center items-center"> <h2 className="mr2 normal">Sign up with</h2> <FcGoogle size="1.7rem" /> </div>
+        <div onClick={() => signInWithGoogle()} className="normal flex justify-center items-center pointer"> <h2 className="mr2 normal">Sign up with</h2> <FcGoogle size="1.7rem" /> </div>
 
       </form>
     </div>
