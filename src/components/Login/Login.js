@@ -9,7 +9,7 @@ const Login = () => {
   return (
     <div className='form-container' style={{ boxShadow: 'rgba(100, 100, 111, 1) 0px 7px 29px 0px', borderRadius: '25px' }}>
       <form className='inner br4' style={{ backgroundColor: 'white', position: 'relative', width: '500px', height: '520px', justifyContent: 'center', alignItems: 'center', padding: "15px" }}>
-        <h1 style={{ paddingTop: '0%' }}>Sign In</h1>
+        <h1> Sign In </h1>
 
         <div className="container flex justify-center items-center"><MdEmail size="1.7rem" color="#9633FF" />
           <input type="email" placeholder="E-mail" /><br />
@@ -30,7 +30,7 @@ const Login = () => {
         <div className="mt2"> or </div>
 
         <div className='normal flex justify-center items-center'>
-        <h2 className="mr2 normal ">Sign in with</h2> <FcGoogle size='1.7rem' />
+          <h2 className="mr2 normal ">Sign in with</h2> <FcGoogle size='1.7rem' />
         </div>
       </form>
     </div>
