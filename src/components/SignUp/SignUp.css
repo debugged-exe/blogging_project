@@ -18,7 +18,7 @@
     box-shadow: rgba(100, 100, 111, 1) 0px 7px 29px 0px;
 }
 
-.container input{
+.input-container input{
     border: none;
     outline: none;
     width: 75%;

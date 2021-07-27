@@ -13,15 +13,15 @@ const SignUp = () => {
       <form id="signup-form">
         <h1> Sign Up </h1>
 
-        <div className="container flex justify-center items-center"><BsFillPersonFill size="1.7rem" color="#9633FF" />
+        <div className="input-container flex justify-center items-center"><BsFillPersonFill size="1.7rem" color="#9633FF" />
           <input type="text" placeholder="Name" /><br />
         </div>
 
-        <div className="container flex justify-center items-center"><MdEmail size="1.7rem" color="#9633FF" />
+        <div className="input-container flex justify-center items-center"><MdEmail size="1.7rem" color="#9633FF" />
           <input type="email" placeholder="E-mail" /><br />
         </div>
 
-        <div className="container flex justify-center items-center"><RiLockPasswordFill size="1.7rem" color="#9633FF" />
+        <div className="input-container flex justify-center items-center"><RiLockPasswordFill size="1.7rem" color="#9633FF" />
           <input type="password" placeholder="Password" /><br />
         </div>
 
