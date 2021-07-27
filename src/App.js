@@ -11,6 +11,8 @@ import SignInPage from './components/pages/SignInPage/SignInPage';
 import Footer from "./components/Footer/Footer.js";
 import Demo from './components/pages/Demo/Demo';
 
+import PrivacyPolicy from "./components/pages/PrivacyPolicy/PrivacyPolicy";
+import TermsAndConditions from "./components/pages/TermsAndConditions/TermsAndConditions";
 
 
 const App = () => {
@@ -25,6 +27,8 @@ const App = () => {
           <Route exact path='/category' component={HomePage} />
           <Route exact path='/signup' component={SignInPage} />
           <Route exact path='/demo' component={Demo} />
+          <Route exath path='/privacy-policy' component={PrivacyPolicy} />
+          <Route exath path='/terms-conditions' component={TermsAndConditions} />
         </Switch>
         <Footer />
       </Router>
