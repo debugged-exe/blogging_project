@@ -7,15 +7,15 @@ import { RiLockPasswordFill } from 'react-icons/ri'
 const Login = () => {
   console.log("login");
   return (
-    <div className='form-container' style={{ boxShadow: 'rgba(100, 100, 111, 1) 0px 7px 29px 0px', borderRadius: '25px' }}>
-      <form className='inner br4' style={{ backgroundColor: 'white', position: 'relative', width: '500px', height: '520px', justifyContent: 'center', alignItems: 'center', padding: "15px" }}>
+    <div className='form-container' >
+      <form id="signup-form" >
         <h1> Sign In </h1>
 
-        <div className="container flex justify-center items-center"><MdEmail size="1.7rem" color="#9633FF" />
+        <div className="input-container flex justify-center items-center"><MdEmail size="1.7rem" color="#9633FF" />
           <input type="email" placeholder="E-mail" /><br />
         </div>
 
-        <div className="container flex justify-center items-center"><RiLockPasswordFill size="1.7rem" color="#9633FF" />
+        <div className="input-container flex justify-center items-center"><RiLockPasswordFill size="1.7rem" color="#9633FF" />
           <input type="password" placeholder="Password" /><br />
         </div>
 
