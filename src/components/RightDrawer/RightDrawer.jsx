@@ -1,4 +1,3 @@
-import { height } from '@material-ui/system';
 import React from 'react';
 import { BsArrowRightShort } from 'react-icons/bs';
 import './RightDrawer.css'
