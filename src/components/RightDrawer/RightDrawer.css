@@ -34,3 +34,25 @@
     width: 100%; 
     font-weight: normal;
 }
+
+.right-container1{
+    display:'flex';
+    flex-wrap:'wrap';
+    flex-direction:'column';
+    justify-content:'space-between';
+    text-align:'left';
+    height:'250px'
+}
+
+.circle{
+    width: 25px;
+    height: 25px;
+    font-size: small;
+    background-color: Blue;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
