@@ -2,16 +2,19 @@ import { height } from '@material-ui/system';
 import React from 'react';
 import { BsArrowRightShort } from 'react-icons/bs';
 import './RightDrawer.css'
+import Newsletter from '../Newsletter/Newsletter';
 
 const RightDrawer = () => {
     return (
         <div className="container-right">
-            <h5>NEWSLETTER</h5>
+            {/* <h5>NEWSLETTER</h5>
             <div className="line" ></div>
             <div className="flex">
                 <input className="email-container" type="email" placeholder="Enter your email..." />
                 <div className="arrow-button white flex items-center justify-center"><BsArrowRightShort size="1.5rem" /></div>
-            </div>
+            </div> */}
+
+            <Newsletter />
 
             <h5>RECENT POSTS</h5>
             <div className="line" ></div>
