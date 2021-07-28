@@ -56,9 +56,9 @@ class Newsletter extends Component {
 
     render() {
         return (<section className={''}>
-            <div className={' newsletter-container'}>
+            <div className={' newsletter-container mt2'}>
                 <p className={'tl b mb2 f6 silver'}>NEWSLETTER</p>
-                <hr />
+                <div className="line  mb2" ></div>
                 <div className={'center'}>
                     <form className={'flex'} onSubmit={this.handleSubmit}>
                         <input

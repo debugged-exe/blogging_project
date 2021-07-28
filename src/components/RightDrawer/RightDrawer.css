@@ -45,8 +45,8 @@
 }
 
 .circle{
-    width: 25px;
-    height: 25px;
+    width: 2rem;
+    height: 2rem;
     font-size: small;
     background-color: Blue;
     border-radius: 50%;
