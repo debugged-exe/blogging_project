@@ -3,7 +3,7 @@ import './Left.css';
 
 const Left = () => {
     return (
-        <div>
+        <div className="ml4">
             <img className="br4" src="https://www.skrill.com/fileadmin/_processed_/1/7/csm_Online_poker_setup_header_7b6e83d4a6.jpg" width="100%" alt={"not visible"} />
             <div>
                 <h1 style={{

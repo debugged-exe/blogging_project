@@ -5,14 +5,14 @@
 
 .line{ background-color: rgb(179, 179, 179); height: 0.75px; margin-bottom: 20px;}
 
-.arrow-button{
+/* .arrow-button{
     height: 40px;
     width: 40px;
     background-color: #9633FF;
     border-radius: 5px;
-}
+} */
 
-input[type=email]{
+/* input[type=email]{
     outline: none;
     border-radius: 5px;
     width: 100%;
@@ -20,17 +20,39 @@ input[type=email]{
     color: rgb(182, 182, 182);
     border: 1px solid rgb(231, 231, 231);   
     height: 40px;
-}
+} */
 
-h5{
+.container-right h5{
     color: rgb(150, 150, 150);
     margin-top: 0;
 }
 
-h2{
+.container-right h2{
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis; 
     width: 100%; 
     font-weight: normal;
+}
+
+.right-container1{
+    display:'flex';
+    flex-wrap:'wrap';
+    flex-direction:'column';
+    justify-content:'space-between';
+    text-align:'left';
+    height:'250px'
+}
+
+.circle{
+    width: 2rem;
+    height: 2rem;
+    font-size: small;
+    background-color: Blue;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
 }
