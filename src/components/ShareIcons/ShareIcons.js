@@ -17,7 +17,7 @@ import {
     TelegramShareButton
 } from "react-share";
 
-const ShareIcons = ({size, round, borderRadius}) => {
+const ShareIcons = ({size, round}) => {
     return (
         <div className="share-icons-container pt2">
             <FacebookShareButton
@@ -27,8 +27,9 @@ const ShareIcons = ({size, round, borderRadius}) => {
                 disabled={false}
                 windowWidth={"1900px"}
                 windowHeight={"1080px"}
+                className={'ma1'}
             >
-                <FacebookIcon size={size} round={round} borderRadius={borderRadius}/>
+                <FacebookIcon size={size} round={round} />
             </FacebookShareButton>
             <WhatsappShareButton
                 url={window.location.href}
@@ -36,6 +37,7 @@ const ShareIcons = ({size, round, borderRadius}) => {
                 disabled={false}
                 windowWidth={"1900px"}
                 windowHeight={"1080px"}
+                className={'ma1'}
             >
                 <WhatsappIcon size={size} round={round}/>
             </WhatsappShareButton>
@@ -45,6 +47,7 @@ const ShareIcons = ({size, round, borderRadius}) => {
                 disabled={false}
                 windowWidth={"1900px"}
                 windowHeight={"1080px"}
+                className={'ma1'}
             >
                 <TwitterIcon size={size} round={round}/>
             </TwitterShareButton>
@@ -54,6 +57,7 @@ const ShareIcons = ({size, round, borderRadius}) => {
                 disabled={false}
                 windowWidth={"1900px"}
                 windowHeight={"1080px"}
+                className={'ma1'}
             >
                 <LinkedinIcon size={size} round={round}/>
             </LinkedinShareButton>
@@ -63,6 +67,7 @@ const ShareIcons = ({size, round, borderRadius}) => {
                 disabled={false}
                 windowWidth={"1900px"}
                 windowHeight={"1080px"}
+                className={'ma1'}
             >
                 <RedditIcon size={size} round={round}/>
             </RedditShareButton>
@@ -72,6 +77,7 @@ const ShareIcons = ({size, round, borderRadius}) => {
                 disabled={false}
                 windowWidth={"1900px"}
                 windowHeight={"1080px"}
+                className={'ma1'}
             >
                 <TelegramIcon size={size} round={round}/>
             </TelegramShareButton>
