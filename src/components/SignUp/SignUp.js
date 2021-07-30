@@ -7,9 +7,37 @@ import './SignUp.css'
 
 const SignUp = () => {
 
+  const fetchAuthUser = () => {
+    fetch('http://localhost:3001/auth/user', {
+      credentials: 'include'
+    })
+    .then(response => response.json())
+    .then(response => {
+      console.log("User: ", response);
+    })
+    .catch(err => {
+      console.log(err);
+      alert('Not authenticated properly');
+    })
+  }
+
   const signInWithGoogle = () => {
-   const googleRedirectURL = "http://localhost:3001/login/google";
-   const newWindow = window.open(googleRedirectURL, "_blank", "width:500,height: 600");
+    let timer: NodeJS.Timeout | null = null;
+    const googleRedirectURL = "http://localhost:3001/login/google";
+    const newWindow = window.open(googleRedirectURL, "_blank", "width:500,height: 600");
+
+    if(newWindow)
+    {
+      timer = setInterval(() => {
+        if(newWindow.closed)
+        {
+          console.log('Yay');
+          fetchAuthUser();
+          if(timer)
+            clearInterval(timer);
+        }
+      }, 500);
+    }
   }
 
   return (

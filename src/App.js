@@ -1,3 +1,4 @@
+import React, {useEffect} from 'react';
 import './App.css';
 import {
   HashRouter as Router,
@@ -10,10 +11,18 @@ import BlogPage from './components/pages/BlogPage/BlogPage.js';
 import SignInPage from './components/pages/SignInPage/SignInPage';
 import Footer from "./components/Footer/Footer.js";
 import PrivacyPolicy from "./components/pages/PrivacyPolicy/PrivacyPolicy";
+import LoginSuccess from "./components/LoginSuccess/LoginSuccess";
 import TermsAndConditions from "./components/pages/TermsAndConditions/TermsAndConditions";
 
 
 const App = () => {
+
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     window.close()
+  //   }, 1000);
+  // }, [])
+
   return (
     <div className="App">
       <Router>
@@ -26,6 +35,7 @@ const App = () => {
           <Route exact path='/signup' component={SignInPage} />
           <Route exath path='/privacy-policy' component={PrivacyPolicy}/>
           <Route exath path='/terms-conditions' component={TermsAndConditions}/>
+          <Route exath path='/login/success' component={LoginSuccess}/>
         </Switch>
         <Footer />
       </Router>
