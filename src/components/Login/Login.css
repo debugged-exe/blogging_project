@@ -1,4 +1,4 @@
-.form-container{  
+/* .form-container{  
     display: flex;
     align-items: center;
     justify-content: center;
@@ -12,7 +12,6 @@
     text-align: center;
     align-items: center;
     border-radius: 25px;
-    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 3); */
     border-top: 1px, solid, rgba(255, 255, 255, 3);
     border-left: 1px, solid, rgba(255, 255, 255, 3);
     box-shadow: rgba(100, 100, 111, 1) 0px 7px 29px 0px;
@@ -53,5 +52,4 @@ input value{
 .checkbox1{
     font-size: small;
     margin: 12px;
-}
-
+} */

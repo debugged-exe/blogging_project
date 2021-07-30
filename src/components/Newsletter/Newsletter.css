@@ -1,5 +1,6 @@
 .newsletter-container{
-    width: 300px;
+    /* width: 300px; */
+    margin-bottom: 2rem;
 }
 .email-input{
     border: none;
@@ -13,4 +14,6 @@
     z-index: 2;
     padding-right: 0.4rem;
     padding-left: 0.5rem;
+    height: 40px;
+    width: 40px;
 }

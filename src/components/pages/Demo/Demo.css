@@ -1,0 +1,14 @@
+.left-container{
+    width: 70%;
+    float: left;
+}
+
+.right-container{
+    width: 22%;
+    float: right;
+    ;
+}
+
+.demo-container{
+    margin: 4rem;
+}

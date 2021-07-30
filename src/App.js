@@ -10,6 +10,7 @@ import HomePage from './components/pages/HomePage/HomePage.js';
 import BlogPage from './components/pages/BlogPage/BlogPage.js';
 import SignInPage from './components/pages/SignInPage/SignInPage';
 import Footer from "./components/Footer/Footer.js";
+import Demo from './components/pages/Demo/Demo';
 import PrivacyPolicy from "./components/pages/PrivacyPolicy/PrivacyPolicy";
 import LoginSuccess from "./components/LoginSuccess/LoginSuccess";
 import TermsAndConditions from "./components/pages/TermsAndConditions/TermsAndConditions";
@@ -36,6 +37,7 @@ const App = () => {
           <Route exath path='/privacy-policy' component={PrivacyPolicy}/>
           <Route exath path='/terms-conditions' component={TermsAndConditions}/>
           <Route exath path='/login/success' component={LoginSuccess}/>
+          <Route exact path='/demo' component={Demo} />
         </Switch>
         <Footer />
       </Router>
