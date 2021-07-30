@@ -1,5 +1,4 @@
 import React from 'react';
-import { BsArrowRightShort } from 'react-icons/bs';
 import './RightDrawer.css'
 import Newsletter from '../Newsletter/Newsletter';
 

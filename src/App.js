@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import './App.css';
 import {
   HashRouter as Router,
@@ -17,13 +17,6 @@ import TermsAndConditions from "./components/pages/TermsAndConditions/TermsAndCo
 
 
 const App = () => {
-
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     window.close()
-  //   }, 1000);
-  // }, [])
-
   return (
     <div className="App">
       <Router>

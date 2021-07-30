@@ -4,7 +4,6 @@ import { MdEmail } from 'react-icons/md';
 import { RiLockPasswordFill } from 'react-icons/ri';
 import { FcGoogle } from 'react-icons/fc';
 import './SignUp.css'
-
 const SignUp = () => {
 
   const fetchAuthUser = () => {
@@ -72,5 +71,7 @@ const SignUp = () => {
 
   )
 }
+
+
 
 export default SignUp;
