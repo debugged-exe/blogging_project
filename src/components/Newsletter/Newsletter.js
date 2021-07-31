@@ -55,7 +55,7 @@ class Newsletter extends Component {
     }
 
     render() {
-        return (<section className={''}>
+        return (<section className={'pt6'}>
             <div className={' newsletter-container mt2'}>
                 <p className={'tl b mb2 f6 silver'}>NEWSLETTER</p>
                 <div className="line  mb2" ></div>
