@@ -1,0 +1,19 @@
+.blog-template{
+    max-height:375px;
+    max-width:375px;
+}
+
+
+@media only screen and (min-width:700px) and (max-width:900px) {
+    .first-line{
+       display: flex;
+       flex-direction: column;
+       text-align: left;
+    }
+}
+
+@media only screen and (max-width:700px){
+    .blog-template{
+        text-align: center;
+    }
+}

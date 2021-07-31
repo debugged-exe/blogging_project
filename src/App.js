@@ -1,9 +1,10 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import './App.css';
 import {
   HashRouter as Router,
   Switch,
-  Route
+  Route,
+  withRouter
 } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar.js";
 import HomePage from './components/pages/HomePage/HomePage.js';
@@ -13,6 +14,7 @@ import Footer from "./components/Footer/Footer.js";
 import Demo from './components/pages/Demo/Demo';
 import PrivacyPolicy from "./components/pages/PrivacyPolicy/PrivacyPolicy";
 import LoginSuccess from "./components/LoginSuccess/LoginSuccess";
+import RecentBlogs from "./components/RecentBlogs/RecentBlogs";
 import TermsAndConditions from "./components/pages/TermsAndConditions/TermsAndConditions";
 
 
@@ -21,6 +23,7 @@ const App = () => {
     <div className="App">
       <Router>
         <Navbar />
+
         <Switch>
           <Route exact path='/' component={HomePage} />
           <Route exact path='/home' component={HomePage} />
