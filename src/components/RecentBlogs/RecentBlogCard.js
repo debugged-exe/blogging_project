@@ -7,7 +7,8 @@ const RecentBlogCard=({blogdetails,imgFlag})=>{
     return(
        <div>
             <div className=  "blog-template mb3 mh2">
-                        <a  className=" pv2 pa2  db no-underline "><img className="db w-100 br4" src={imgFlag?blogdetails.imgUrl:""} /></a>
+                        <a  className=" pv2 pa2  db no-underline ">
+                            <img className="db w-100 br4" alt="blog" src={imgFlag?blogdetails.imgUrl:""} /></a>
                     <span className="first-line w-100 flex inline-ns  pa2 ">
                         <p style={{width:"70%",textAlign:"left",fontSize:"1.2rem",fontWeight:"bold"}}>Material Dashboard Pro React</p>
                         <p style={{width:"30%",fontSize:"1rem"}}>21st June,2021</p>

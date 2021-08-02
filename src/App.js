@@ -1,10 +1,10 @@
-import React,{useEffect} from 'react';
+import React from 'react';
 import './App.css';
 import {
   HashRouter as Router,
   Switch,
   Route,
-  withRouter
+  // withRouter
 } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar.js";
 import HomePage from './components/pages/HomePage/HomePage.js';
@@ -15,7 +15,7 @@ import Demo from './components/pages/Demo/Demo';
 import Newsletter from './components/Newsletter/Newsletter';
 import PrivacyPolicy from "./components/pages/PrivacyPolicy/PrivacyPolicy";
 import LoginSuccess from "./components/LoginSuccess/LoginSuccess";
-import RecentBlogs from "./components/RecentBlogs/RecentBlogs";
+//import RecentBlogs from "./components/RecentBlogs/RecentBlogs";
 import TermsAndConditions from "./components/pages/TermsAndConditions/TermsAndConditions";
 
 
