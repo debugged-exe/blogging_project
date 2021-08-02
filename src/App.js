@@ -18,7 +18,6 @@ import LoginSuccess from "./components/LoginSuccess/LoginSuccess";
 //import RecentBlogs from "./components/RecentBlogs/RecentBlogs";
 import TermsAndConditions from "./components/pages/TermsAndConditions/TermsAndConditions";
 
-
 const App = () => {
   return (
     <div className="App">
