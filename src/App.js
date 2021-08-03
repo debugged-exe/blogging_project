@@ -15,7 +15,8 @@ import Demo from './components/pages/Demo/Demo';
 import Newsletter from './components/Newsletter/Newsletter';
 import PrivacyPolicy from "./components/pages/PrivacyPolicy/PrivacyPolicy";
 import LoginSuccess from "./components/LoginSuccess/LoginSuccess";
-//import RecentBlogs from "./components/RecentBlogs/RecentBlogs";
+// import TrendingBlogPage from "./components/TrendingBlogPage/TrendingBlogPage";
+// import RecentBlogs from "./components/RecentBlogs/RecentBlogs";
 import TermsAndConditions from "./components/pages/TermsAndConditions/TermsAndConditions";
 
 const App = () => {
@@ -23,8 +24,7 @@ const App = () => {
     <div className="App">
       <Router>
         <Navbar />
-
-        <Switch>
+         <Switch>
           <Route exact path='/' component={HomePage} />
           <Route exact path='/home' component={HomePage} />
           <Route exact path='/blog' component={BlogPage} />
@@ -35,7 +35,7 @@ const App = () => {
           <Route exath path='/login/success' component={LoginSuccess}/>
           <Route exact path='/demo' component={Demo} />
           <Route exact path="/newsletter" component={Newsletter} />
-        </Switch>
+        </Switch> 
         <Footer />
       </Router>
     </div>
