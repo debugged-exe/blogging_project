@@ -1,0 +1,108 @@
+
+.ratePrice{
+  display: flex;
+  justify-content: center;
+}
+
+
+.grid-component{
+  display:flex;
+}
+.cardStyle{
+  position: relative;
+
+}
+.imageShadow:hover img {
+  background-color:#000;
+    opacity:0.6;
+    width: 100%;
+}
+
+.cardStyle a{
+  display:none;
+  position:absolute;
+  left:35%;
+  top:45%;
+
+}
+
+.cardStyle:hover a{
+  display: block;
+  opacity: 1;
+}
+.viewBundleButton{
+  background-color:#00BBFF;
+}
+@media screen and (max-width:320px) {
+  .grid-component{
+    display: flex;
+    flex-direction: column;
+    width: 100%
+  }
+.cardStyle a{
+  display: none;
+  position: absolute;
+  left:30%;
+  top:40%;;
+}
+.cardStyle:hover a{
+  display: block;
+  opacity: 1;
+}
+.cardDetail p{
+  padding: 0;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 20px;
+display:flex;
+}
+.productSpan{
+  padding: 0;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+}
+
+@media screen and (max-width:769px) {
+  .grid-component{
+    display: flex;
+    flex-direction: column;
+    width: 100%
+  }
+  .cardStyle a{
+    display: none;
+    position: absolute;
+    left:50%;
+    top:40%;;
+  }
+  .productSpan{
+    padding: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+@media screen and (max-width:1200px) {
+
+  .cardStyle a{
+    display: none;
+    position: absolute;
+    left:30%;
+    top:40%;;
+  }
+  .cardDetail {
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  .cardDetail p{
+    font-size:20px;
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+  .productSpan{
+    padding: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
