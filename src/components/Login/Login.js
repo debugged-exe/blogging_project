@@ -3,29 +3,85 @@ import 'tachyons';
 import { FcGoogle } from 'react-icons/fc'
 import { MdEmail } from 'react-icons/md'
 import { RiLockPasswordFill } from 'react-icons/ri'
+import { toast, ToastContainer } from "react-toastify";
 
-const Login = () => {
-  console.log("login");
+//redux
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
+import { setCurrentUser } from '../../redux/user/user.actions.js';
+
+toast.configure();
+
+const Login = ({setCurrentUser, history}) => {
+
+  const signin = () => {
+      let email = document.getElementById('singin-email').value;
+      let pass = document.getElementById('singin-password').value;
+      let payload = {"email": email, "password": pass };
+      fetch('http://localhost:3001/auth/signin', {
+        method: 'post',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(payload)
+    })
+    .then(resp => resp.json())
+    .then(response => {
+      if(response["username"]) {
+        const user = {
+          username: response["username"],
+          email: response["email"]
+        }
+        setCurrentUser(user);
+        toast.success('Successfully signed in.', {
+          position: toast.POSITION.TOP_CENTER,
+          autoClose: 1500
+        });
+        setTimeout(() => {
+          history.push('/');
+        }, 1500);
+      }
+      else if(response === "fail") {
+        toast.error('Invalid email or password', {
+          position: toast.POSITION.TOP_CENTER,
+          autoClose: 1500
+        });
+        document.getElementById("singin-email").value = "";
+        document.getElementById("singin-password").value = "";
+      }
+      else if(response === "Error while signing in") {
+        toast.error('Internal Server Error.', {
+          position: toast.POSITION.TOP_CENTER,
+          autoClose: 1500
+        });
+      }
+    })
+    .catch(err => {
+      console.log(err);
+      toast.warning('Error while processing request', {
+        position: toast.POSITION.TOP_CENTER,
+        autoClose: 2500
+      });
+    })
+  }
   return (
     <div className='form-container' >
-      <form id="signup-form" >
+      <form id="signin-form" >
         <h1> Sign In </h1>
 
         <div className="input-container flex justify-center items-center"><MdEmail size="1.7rem" color="#9633FF" />
-          <input type="email" placeholder="E-mail" /><br />
+          <input type="email" placeholder="E-mail" id="singin-email"/><br />
         </div>
 
         <div className="input-container flex justify-center items-center"><RiLockPasswordFill size="1.7rem" color="#9633FF" />
-          <input type="password" placeholder="Password" /><br />
+          <input type="password" placeholder="Password" id= "singin-password"/><br />
         </div>
 
 
         <div>
-          <input className='mr2 h6 mt4' type='checkbox' checked id='check' name='check' />
+          <input className='mr2 h6 mt4' type='checkbox' id='check' name='check' />
           <span style={{ fontSize: 'small' }}>I have read and agree to <span className='purple'>Terms and Conditions</span></span>
         </div>
 
-        <a className="mt4 br4 grow link ph5 dib white but1" style={{ backgroundImage: 'linear-gradient(to bottom right,#9633FF,#3B00F2)', borderRadius: '25px', padding: '14px 40px' }} href="#0">SIGN IN</a>
+        <input className="grow pointer" onClick={() => signin()} type = "submit" value="SIGN IN" />
 
         <div className="mt2"> or </div>
 
@@ -33,8 +89,14 @@ const Login = () => {
           <h2 className="mr2 normal ">Sign in with</h2> <FcGoogle size='1.7rem' />
         </div>
       </form>
+      <ToastContainer />
     </div>
   )
 }
 
-export default Login;
+const mapDispatchToProps = dispatch => ({
+  setCurrentUser: user => dispatch(setCurrentUser(user))
+})
+
+
+export default connect(null, mapDispatchToProps)(withRouter(Login));
