@@ -15,8 +15,7 @@ import Demo from './components/pages/Demo/Demo';
 import Newsletter from './components/Newsletter/Newsletter';
 import PrivacyPolicy from "./components/pages/PrivacyPolicy/PrivacyPolicy";
 import LoginSuccess from "./components/LoginSuccess/LoginSuccess";
-import TrendingBlogPage from "./components/TrendingBlogPage/TrendingBlogPage";
-import RecentBlogs from "./components/RecentBlogs/RecentBlogs";
+
 import TermsAndConditions from "./components/pages/TermsAndConditions/TermsAndConditions";
 
 const App = () => {
