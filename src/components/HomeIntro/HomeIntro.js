@@ -17,7 +17,16 @@ const HomeIntro = () => {
          <p className="f2 mb3">Fully Coded UI Tools to create web and mobile apps</p>
          <p style={{fontSize:'18px'}}>UI Kits, Templates and Dashboards built on top of Bootstrap, Vue.js, React, Angular, Node.js and Laravel.
             Join over 1,621,564 creatives to access all our products!</p>
-          <SearchDiv/>
+          <SearchDiv placeholder="search tag" data={["General Talks", 
+        "Web dev", 
+        "Android Dev",
+        "Ios dev",
+        "React" ,
+        "Kotlin",
+        "Js",
+        "Html",
+        "CSS",
+        "Java"]}/>
        </div>
        <div className=" carousel-div">
          <Carousel showArrows={false} itemsToShow={1} enableAutoPlay={true} autoPlaySpeed={2000}>

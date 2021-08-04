@@ -1,75 +1,64 @@
 import React, { useState } from 'react'
 import { Input } from '@material-ui/core';
-import TextField from '@material-ui/core/TextField';
-import Autocomplete from '@material-ui/lab/Autocomplete';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import { AiOutlineSearch } from 'react-icons/ai';
+import './SearchDiv.css'
 
-const SearchDiv = () => {
+const SearchDiv = ({ placeholder, data }) => {
 
-    let option_tags = ["General Talks",
-        "Web dev",
-        "Android Dev",
-        "Ios dev",
-        "React",
-        "Kotlin",
-        "Js",
-        "Html",
-        "CSS",
-        "Java"]
+  const [filteredData, setFilteredData] = useState([]);
+  const [wordEntered, setWordEntered] = useState("");
 
-    const [myOptions, setMyOptions] = useState([])
+  const handleChange = (event) => {
+    let searchWord = event.target.value;
+    setWordEntered(searchWord);
+    const newFilter = data.filter((value) => {
+      return value.toLowerCase().includes(searchWord);
+    });
+    searchWord === "" ? setFilteredData([]) : setFilteredData(newFilter);
+  }
 
-    const getDataFromAPI = () => {
-        console.log("Options Fetched from API")
+  const handleClick = (event) => {
+    const tag = event.target.getAttribute('value');
+    setWordEntered(tag);
+    console.log("tag: ",tag);
+  }
 
-        fetch('http://dummy.restapiexample.com/api/v1/employees').then((response) => {
-            return response.json()
-        }).then((res) => {
-            console.log(res.data)
-            for (var i = 0; i < res.data.length; i++) {
-                myOptions.push(res.data[i].employee_name)
-            }
-            setMyOptions(myOptions)
-        })
-    }
-        return (
-
-          <div>
-
-            <form className="mv4">
-
-                <Input type="text" className="search-div" disabled='disabled'
-                 disableUnderline={true}
-                 startAdornment={
-                  <InputAdornment position='start' style={{marginLeft:'-20px'}}>
-                  <AiOutlineSearch className="bg-white pa2 search-button"
-                  size="1.9rem"
-                  color="gray"
-                  />
-                  </InputAdornment>
-  
-               } 
-              
-                    
+  return (
+    <div>
+      <div className="mv4">
+        <Input type="text"
+          className="search-div"
+          disableUnderline={true}
+          startAdornment={
+            <InputAdornment position='start' style={{ marginLeft: '-20px' }}>
+              <AiOutlineSearch className="bg-white pa2 search-button"
+                size="1.9rem"
+                color="gray"
               />
-              <Autocomplete
-                style={{ width: '80%' ,marginTop:'-40px',marginLeft:'50px'}}
-                freeSolo
-                autoComplete
-                autoHighlight
-                options={myOptions}
-                renderInput={(params) => (
-                    <TextField {...params}
-                    onChange={getDataFromAPI}
-                    placeholder="eg. material kit"
-                    />
-        )}
-      />
-             
-            </form>
-            </div>
-        )
-    }
+            </InputAdornment>
+          }
+          placeholder = {placeholder}
+          onChange={handleChange}
+          value={wordEntered}
+        />
+        <div>
+          {
+            filteredData.length !=0 &&
+            (
+              <div className="result">
+                {filteredData.map((value, key) => {
+                  return (
+                    <div onClick={handleClick} className="dataItem" value={value}>{value}</div>
+                  );
+                })}
+              </div>
+            )
+          }
+        </div>
+      </div>
+    </div>
+  )
+}
 
 export default SearchDiv;
