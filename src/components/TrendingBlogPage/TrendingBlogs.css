@@ -25,7 +25,9 @@
   top:45%;
 
 }
-
+.productSpan span{
+  text-align: left;
+}
 .cardStyle:hover a{
   display: block;
   opacity: 1;

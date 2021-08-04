@@ -1,0 +1,26 @@
+.inputStyling{
+  padding: 10px;
+  margin: 10px 0;
+  border: 0;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.1);
+  width: 25%;
+  border-radius: 8px;
+}
+.subBloginputStyling{
+  padding: 10px;
+  border: 0;
+  width: 25%;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.1);
+}
+.adminPanelSendButton{
+  background-image: linear-gradient(to bottom right, #9633FF, #3B00F2);
+  border: none;
+}
+.subBlogAddButton:hover{
+  background-color: green;
+  color: white;
+}
+.subBlogRemoveButton:hover{
+  background-color: red;
+  color:white;
+}

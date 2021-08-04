@@ -1,6 +1,8 @@
 
 import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
+import './AdminPanel.css';
+
 
 function AdminPanel() {
   const [inputFields, setInputFields] = useState([
@@ -32,7 +34,7 @@ function AdminPanel() {
   		if(resp["title"])
   		{
   		prompt('Your message was recieved successfully.Thank you we will try to solve your query as soon as possible.')
-      
+
   		}
   	})
   	.catch(err => {
@@ -65,12 +67,13 @@ function AdminPanel() {
   return (
     <div className="bg-white">
       <h1>Admin Panel</h1>
+      <div>
       <form  onSubmit={handleSubmit}>
-        <input type="text" placeholder="Title" value={maintitle} onChange={(e)=>setTitle(e.target.value)}/><br/>
-        <input type="text" placeholder="Image Url" value={mainimg} onChange={(e)=>setImg(e.target.value)}/><br/>
-        <input type="text" placeholder="Description" value={maindes} onChange={(e)=>setDes(e.target.value)}/><br/>
-        <label for="tag">Tag</label>
-        <select name="tag" value={tag} onChange={(e)=>setTag([e.target.value])}>
+        <input type="text" className="inputStyling" placeholder="Title" value={maintitle} onChange={(e)=>setTitle(e.target.value)}/><br/>
+        <input type="text" className="inputStyling" placeholder="Image Url" value={mainimg} onChange={(e)=>setImg(e.target.value)}/><br/>
+        <textarea type="text" className="inputStyling" placeholder="Description" value={maindes} onChange={(e)=>setDes(e.target.value)}></textarea><br/>
+        <select className="inputStyling " name="tag" value={tag} onChange={(e)=>setTag([e.target.value])}>
+        <option value="" disabled hidden selected>Tag</option>
           <option value="Web dev">Web dev</option>
           <option value="Android Dev">Android Dev</option>
           <option value="Ios dev">Ios dev</option>
@@ -80,38 +83,47 @@ function AdminPanel() {
           <option value="Html">Html</option>
           <option value= "CSS">CSS</option>
           <option value="Java">Java</option>
-        </select><br/> 
-        <input type="number" placeholder="Read Time(in min)" value={read} onChange={(e)=>setRead(e.target.value)}/><br/>
-       
-        { 
+        </select><br/>
+        <input  className="inputStyling" type="number" placeholder="Read Time(in min)" value={read} onChange={(e)=>setRead(e.target.value)}/><br/>
+
+        {
         inputFields.map(inputField => (
           <div key={inputField.id}>
             <h3>Sub blog</h3>
-            < input 
+            <div className="mv3">
+            <div className="mv3">
+            < input
               type="text"
+              className="subBloginputStyling"
               name="image"
               placeholder="image Url"
               value={inputField.image}
               onChange={event => handleChangeInput(inputField.id, event)}
-            />
-             < input 
+            /></div>
+
+          <textarea
               type="text"
+              className="subBloginputStyling mh3"
+
               name="para"
               placeholder="Description"
               value={inputField.para}
               onChange={event => handleChangeInput(inputField.id, event)}
-            />
-            <button disabled={inputFields.length === 1} onClick={() => handleRemoveFields(inputField.id)}>
-                Remove            
+            ></textarea>
+            </div>
+            <button className="f6 link dim br2 ba ph3 pv2 mb2 dib mid-gray mh3 subBlogRemoveButton" disabled={inputFields.length === 1} onClick={() => handleRemoveFields(inputField.id)}>
+                Remove
             </button>
-             <button onClick={handleAddFields}>Add</button>
+             <button className="f6 link dim br2 ba ph3 pv2 mb2 dib mid-gray mh3 subBlogAddButton" onClick={handleAddFields}>Add</button>
           </div>
         )) }
+        <div className="mv3">
         <button
-          className="bg-blue white"
-          type="submit" 
-          onClick={handleSubmit}>Send</button>
+          className="f6 grow no-underline br-pill ph4 pv2 mb2 dib white adminPanelSendButton"
+          type="submit"
+          onClick={handleSubmit}>Send</button></div>
       </form>
+      </div>
     </div>
   );
 }
