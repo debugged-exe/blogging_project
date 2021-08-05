@@ -1,4 +1,15 @@
-import React from 'react';
+import React,{useEffect, useState} from 'react';
+
+// redux
+import { connect } from 'react-redux';
+import {setBlog} from '../../redux/blog/blog.actions.js';
+
+// reselect
+import {createStructuredSelector} from 'reselect';
+import {selectTag} from '../../redux/tags/tags.selectors.js';
+
+import {withRouter} from 'react-router-dom';
+
 import './Left.css';
 
 const blogMock = [{
@@ -62,17 +73,46 @@ const blogMock = [{
     createdAt:"2020-03-15T05:44:10.338Z"
 }];
 
-const Left = () => {
+const Left = ({tag, setBlog, history}) => {
+
+    const [blogList, setBlogList] = useState([])
+
+    useEffect(() => {
+        fetch('http://localhost:3001/blogs/search', {
+            method: 'post',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+                tags: tag,
+                pageNo: 0
+            })
+        })
+        .then(response => response.json())
+        .then(response => {
+            if(response.length)
+            {
+               setBlogList(response) 
+            }
+        })
+        .catch(err => {
+            console.log(err);
+            alert("Couldn't fetch blog");
+        });
+
+    }, [])
+
     return (
         <div className="ml4 pointer">
             {
 
-            blogMock.map((item,index)=>{
+            blogList.map((item,index)=>{
                 var time=item.createdAt.split('T');
                  var parts=time[0].toString().split('-');
                  var mydate = new Date(parts[0],parts[1] - 1,parts[2]);
                 return(
-                    <div>
+                    <div onClick={() => {
+                        setBlog(item);
+                        history.push('/blog/#blog');
+                    }}>
                         <img className="br4" src={item.image_url} width="100%" alt={"not visible"} />
                         <div>
                             <h1 style={{
@@ -91,4 +131,12 @@ const Left = () => {
     );
 }
 
-export default Left;
+const mapStateToProps = createStructuredSelector({
+    tag: selectTag
+});
+
+const mapDispatchToProps = dispatch => ({
+   setBlog: blog => dispatch(setBlog(blog))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Left));

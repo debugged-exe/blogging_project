@@ -50,7 +50,7 @@ const SearchDiv = ({ placeholder, data , setTag, history}) => {
         />
         <div>
           {
-            filteredData.length !=0 &&
+            filteredData.length !==0 &&
             (
               <div className="result">
                 {filteredData.map((value, key) => {
