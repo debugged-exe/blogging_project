@@ -9,7 +9,7 @@ import {connect} from "react-redux";
 //set actions
 import {setTag} from "../../redux/tags/tags.actions";
 
-const SearchDiv = ({ placeholder, data , setTag}) => {
+const SearchDiv = ({ placeholder, data , setTag, history}) => {
 
   const [filteredData, setFilteredData] = useState([]);
   const [wordEntered, setWordEntered] = useState("");
@@ -18,7 +18,7 @@ const SearchDiv = ({ placeholder, data , setTag}) => {
     let searchWord = event.target.value;
     setWordEntered(searchWord);
     const newFilter = data.filter((value) => {
-      return value.toLowerCase().includes(searchWord);
+      return value.toLowerCase().includes(searchWord.toLowerCase());
     });
     searchWord === "" ? setFilteredData([]) : setFilteredData(newFilter);
   }
@@ -27,7 +27,7 @@ const SearchDiv = ({ placeholder, data , setTag}) => {
     const tag = event.target.getAttribute('value');
     setWordEntered(tag);
     setTag(tag);
-    console.log("tag: ",tag);
+    history.push('/demo');
   }
 
   return (
