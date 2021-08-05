@@ -78,7 +78,7 @@ const Left = () => {
                             <h1 style={{
                                 textAlign: "left", marginBottom: "10px"
                             }}> {item.title} </h1>
-                             <h5 className="light-silver tl">{mydate.toDateString().toUpperCase()} •  {item.read_time} MIN READ • <span className="f5" style={{color:"#00bbff"}}>{item.tags[0]}</span></h5>
+                             <h5 className="light-silver tl">{mydate.toDateString().toUpperCase()} •  {item.read_time} MIN READ • <span className="f" style={{color:"#00bbff"}}>{item.tags[0]}</span></h5>
                             <p className="f4 pt2" style={{
                                 textAlign: "left"
                             }}>{item.preface}</p>

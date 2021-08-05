@@ -13,9 +13,9 @@ import Faqs from './Faqs/faqfun';
 
 const AboutUs = () => {
     return (
-        <section>
-            <div className="tc pt5">
-                <div className="about-div pt4">
+        <section className={''}>
+            <div className="tc">
+                <div className="about-div pt6">
                     <p className="f1 fw6 white">Pathway towards Investment</p>
                     <div className="about-grid">
                         <div className="circle-div" style={{zIndex: '5'}}>
