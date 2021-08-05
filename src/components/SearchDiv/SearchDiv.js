@@ -3,8 +3,13 @@ import { Input } from '@material-ui/core';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import { AiOutlineSearch } from 'react-icons/ai';
 import './SearchDiv.css'
+import {withRouter} from "react-router-dom";
+//redux connect
+import {connect} from "react-redux";
+//set actions
+import {setTag} from "../../redux/tags/tags.actions";
 
-const SearchDiv = ({ placeholder, data }) => {
+const SearchDiv = ({ placeholder, data , setTag}) => {
 
   const [filteredData, setFilteredData] = useState([]);
   const [wordEntered, setWordEntered] = useState("");
@@ -21,6 +26,7 @@ const SearchDiv = ({ placeholder, data }) => {
   const handleClick = (event) => {
     const tag = event.target.getAttribute('value');
     setWordEntered(tag);
+    setTag(tag);
     console.log("tag: ",tag);
   }
 
@@ -49,7 +55,7 @@ const SearchDiv = ({ placeholder, data }) => {
               <div className="result">
                 {filteredData.map((value, key) => {
                   return (
-                    <div onClick={handleClick} className="dataItem" value={value}>{value}</div>
+                    <div onClick={handleClick} className="dataItem" key={key} value={value}>{value}</div>
                   );
                 })}
               </div>
@@ -61,4 +67,7 @@ const SearchDiv = ({ placeholder, data }) => {
   )
 }
 
-export default SearchDiv;
+const mapDispatchToProps = dispatch => ({
+  setTag: tag => dispatch(setTag(tag))
+})
+export default connect(null,mapDispatchToProps)(withRouter(SearchDiv));
