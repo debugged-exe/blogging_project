@@ -16,7 +16,7 @@ const Blog = ()=> {
                  return(
                    <div key={item._id}>
                       <h1>{item.title}</h1>
-                      <h5 className="gray">{mydate.toDateString().toUpperCase()} . {item.read_time} MIN READ .<span style={{color:"#00bbff"}}> WEB DESIGN</span></h5>
+                      <h5 className="gray">{mydate.toDateString().toUpperCase()} •  {item.read_time} MIN READ • <span style={{color:"#00bbff"}}> WEB DESIGN</span></h5>
                       <img className="br4 main-img" alt="blog" src={item.image_url} />
                       <div className="blog-para">
                         <p className="f5 description">

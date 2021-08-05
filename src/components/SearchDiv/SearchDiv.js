@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Input } from '@material-ui/core';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import { AiOutlineSearch } from 'react-icons/ai';
-import './SearchDiv.css'
+import './SearchDiv.css';
 
 const SearchDiv = ({ placeholder, data }) => {
 
